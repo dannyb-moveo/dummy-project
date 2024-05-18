@@ -48,7 +48,7 @@ jobs:
           host: 52.57.211.196
           username: ubuntu
           key: ${{ secrets.PEM_FILE_DEV }}
-          source: "dist/"
+          source: "build/"
           target: "~/releases/release_front"
 
       - name: Create symbolic link
@@ -59,4 +59,4 @@ jobs:
           key: ${{ secrets.PEM_FILE_DEV }}
           script: |
             RELEASE_DIR=~/releases/release_front
-            sudo ln -nfs $RELEASE_DIR/dist /home/ubuntu/front/dannyb-test
+            sudo ln -nfs $RELEASE_DIR/build /home/ubuntu/front/dannyb-test
