@@ -59,4 +59,4 @@ jobs:
           key: ${{ secrets.PEM_FILE_DEV }}
           script: |
             RELEASE_DIR=~/releases/release_front
-            sudo ln -nfs $RELEASE_DIR/build /home/ubuntu/front/dummy-project/build
+            sudo ln -nfs $RELEASE_DIR/build /home/ubuntu/front/dummy-project
