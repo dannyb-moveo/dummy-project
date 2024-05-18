@@ -1,7 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
 import { Suspense, lazy, useState } from "react";
-// import LazyComponent from "./components/LazyComponent/LazyComponent";
 
 const LazyComponent = lazy(() =>
   import("./components/LazyComponent/LazyComponent")
@@ -9,6 +8,7 @@ const LazyComponent = lazy(() =>
 
 function App() {
   const [componentLoaded, setComponentLoaded] = useState(false);
+  console.log(componentLoaded);
 
   const handleClick = () => {
     setComponentLoaded(true);
@@ -40,7 +40,6 @@ function App() {
       >
         {<LazyComponent />}
       </Suspense>
-      {/* <LazyComponent /> */}
     </div>
   );
 }
